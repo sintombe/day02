@@ -1,34 +1,34 @@
-#include <stdio.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sintombe <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/07/17 08:30:14 by sintombe          #+#    #+#             */
+/*   Updated: 2020/07/17 08:37:14 by sintombe         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include <stdio.h>
+void ft_putchar(char c){write(1,&c,1);}
 void ft_print_numbers(int digit[], int count)
 {
    int temp, n, u, m;
-   for (u = 0; u < count; ++u)
+   while (u = 0 &&  u < count )
    {
-      for (m = u + 1; m < count; ++m)
+      while (m = u + 1 &&  m < count)
       {
-         if (digit[u] > digit[m])
+         while (digit[u] > digit[m])
          {
             temp = digit[u];
             digit[u] = digit[m];
             digit[m] = temp;
          }
+		 
       }
+	  m++;
    }
-   printf("Numbers in ascending order:\n");
-   for (n = 0; n < count; ++n)
-      printf("%d\n", digit[n]);
-}
-void main()
-{
-   int n, count, digit[100];
- 
-   printf("How many numbers you are gonna enter:");
-   scanf("%d", &count);
-   printf("\nEnter the numbers one by one:");
-   
-   for (n = 0; n < count; ++n)
-      scanf("%d", &digit[n]);
- 
-   ft_print_numbers(digit, count);
-}
+   u++;
+   ft_putchar(digit[n]);
+ }
